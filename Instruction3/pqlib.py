@@ -5,12 +5,12 @@ class PriorityItem:
        self.item = item
        self.prio = priority
 
-    def __cmp__ ( self, other ):
+    def __lt__ ( self, other ):
         assert isinstance( other, PriorityItem )
-        return other.prio-self.prio
+        return other.prio < self.prio
 
     def __str__ ( self ):
-        return '%s (priority: %d)' % (self.item,self.prio)        
+        return '{} (priority: {})'.format(self.item,self.prio)
 
 class PriorityQueue:
 

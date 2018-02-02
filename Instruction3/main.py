@@ -15,4 +15,4 @@ patients.put( PriorityItem('Patient 8',4) )
 
 #The doctor receives the patients
 while not patients.isEmpty():
-    print "The doctor receives %d" % patients.getPrio()
+    print( "The doctor receives {}".format(patients.getPrio()) )
