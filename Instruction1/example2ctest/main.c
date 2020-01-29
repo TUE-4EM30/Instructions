@@ -14,74 +14,69 @@
 #include <stdio.h>
 #include "../example2c/mylib.h"
 
-int main ( void )
+int main(void)
 {
-	Coin coins[10];
- 	int amount;
-	int n;
+  Coin coins[10];
+  int amount;
+  int n;
 
-	n = init( coins );
+  n = init(coins);
 
-	// test 1
+  // test 1
 
-	printf("Test 1: splitting 100 cent\n");
+  printf("Test 1: splitting 100 cent\n");
 
-	amount = 100;	
-    
-	split( amount , coins );
+  amount = 100;
 
-	if ( coins[0].count == 0 && 
-		 coins[1].count == 1 && 
-		 coins[2].count == 0 && 
-		 coins[3].count == 0 &&
-	     coins[4].count == 0 && 
-		 coins[5].count == 0 )
-	{
-		report( amount , coins , n );
+  split(amount, coins);
 
-		printf("Test 1 passed\n");
-	}
-	else
-	{
-		report( amount , coins , n );
+  if (coins[0].count == 0 &&
+      coins[1].count == 1 &&
+      coins[2].count == 0 &&
+      coins[3].count == 0 &&
+      coins[4].count == 0 &&
+      coins[5].count == 0)
+  {
+    report(amount, coins, n);
 
-		printf("Test 1 failed\n");
-	}
+    printf("Test 1 passed\n");
+  }
+  else
+  {
+    report(amount, coins, n);
 
-	reset ( coins , n );
+    printf("Test 1 failed\n");
+  }
 
-	// test 2
+  reset(coins, n);
 
-	printf("\nTest 2: splitting 780 cent\n\n");
+  // test 2
 
-	amount = 780;	
-    
-	split( amount , coins );
+  printf("\nTest 2: splitting 780 cent\n\n");
 
-	if ( coins[0].count == 3 && 
-		 coins[1].count == 1 && 
-		 coins[2].count == 1 && 
-		 coins[3].count == 1 &&
-	     coins[4].count == 1 && 
-		 coins[5].count == 0 )
-	{
-		report( amount , coins , n );
+  amount = 780;
 
-		printf("Test 2 passed\n");
-	}
-	else
-	{
-		report( amount , coins , n );
+  split(amount, coins);
 
-		printf("Test 2 failed\n");
-	}
+  if (coins[0].count == 3 &&
+      coins[1].count == 1 &&
+      coins[2].count == 1 &&
+      coins[3].count == 1 &&
+      coins[4].count == 1 &&
+      coins[5].count == 0)
+  {
+    report(amount, coins, n);
 
-	reset ( coins , n );
+    printf("Test 2 passed\n");
+  }
+  else
+  {
+    report(amount, coins, n);
 
+    printf("Test 2 failed\n");
+  }
 
+  reset(coins, n);
 
-
-  	return 0;
+  return 0;
 }
-
-

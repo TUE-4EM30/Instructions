@@ -2,24 +2,24 @@
 
 //----------------------------------------------------------
 //  Read total amount of money
-//  
+//
 //  Returns: amount (int)
 //----------------------------------------------------------
 
-int read( void )
+int read(void)
 
 {
-	int amount;
+  int amount;
 
-	printf("Enter the amount in Eurocents : ");
-	scanf("%d",&amount);
+  printf("Enter the amount in Eurocents : ");
+  scanf("%d", &amount);
 
-	return amount;
+  return amount;
 }
 
 //----------------------------------------------------------
 //  Splits an amount in a number of coins
-//  
+//
 //  Arg. amount     total amount of money
 //       count      array that counts the number of coins used
 //       coins      array with values of specific coins
@@ -27,31 +27,30 @@ int read( void )
 
 void split
 
-	( int     amount ,
-	  int*    count  ,
-	  int*    coins  )
+    (int amount,
+     int *count,
+     int *coins)
 
-{	
-	int i = 0;
+{
+  int i = 0;
 
-  	while( amount > 0 )
-  	{ 
-   		if ( amount >= coins[i] )
-    	{
-      		count[i] = count[i] + 1;
-      		amount   = amount - coins[i];
-    	}
-    	else
-    	{
-      		i = i+1;
-    	}
-  	}
+  while (amount > 0)
+  {
+    if (amount >= coins[i])
+    {
+      count[i] = count[i] + 1;
+      amount = amount - coins[i];
+    }
+    else
+    {
+      i = i + 1;
+    }
+  }
 }
-
 
 //----------------------------------------------------------
 //  Writes a report of the algorithm
-//  
+//
 //  Arg. amount     total amount of money
 //       count      array that counts the number of coins used
 //       coins      array with values of specific coins
@@ -60,18 +59,18 @@ void split
 
 void report
 
-	( int     amount ,
-	  int*    count  ,
-	  int*    coins  ,
-	  int     n      )
+    (int amount,
+     int *count,
+     int *coins,
+     int n)
 
 {
-	int i;
+  int i;
 
-	printf("The sum of %i cents, can be paid using the following coins\n",amount);
+  printf("The sum of %i cents, can be paid using the following coins\n", amount);
 
-  	for ( i = 0 ; i < n ; i++ )
-  	{
-  	  	printf("%i coins of %i cent\n",count[i],coins[i]);
-  	}
+  for (i = 0; i < n; i++)
+  {
+    printf("%i coins of %i cent\n", count[i], coins[i]);
+  }
 }

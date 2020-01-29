@@ -3,31 +3,27 @@
 
 typedef struct
 {
-	int      count;
-	int      value;
-	char     *name;
+  int count;
+  int value;
+  char *name;
 } Coin;
 
-int init
-
-	( Coin* coins );
+int init(Coin *coins);
 
 void reset
-	
-	( Coin* coins ,
-	  int	 n     );
 
+    (Coin *coins,
+     int n);
 
-int read ( void );
+int read(void);
 
 void split
 
-	( int     amount ,
-	  Coin*   coins  );
-
+    (int amount,
+     Coin *coins);
 
 void report
 
-	( int     amount ,
-	  Coin*   coins  ,
-	  int     n      );
+    (int amount,
+     Coin *coins,
+     int n);
