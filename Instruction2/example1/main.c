@@ -11,31 +11,30 @@
 
 #include "mylib.h"
 
-int main( void )
+int main(void)
 {
-	float grades[MAX_GRADES];
-	int   studID[MAX_GRADES];
-	int   count;
-	int   hist[HIST_ITEMS];
+  float grades[MAX_GRADES];
+  int studID[MAX_GRADES];
+  int count;
+  int hist[HIST_ITEMS];
 
-	float stdDev;
+  float stdDev;
 
-	count = read_grades( "../grades/grades.dat" , grades , studID );
+  count = read_grades("../grades/grades.dat", grades, studID);
 
-	print_grades( grades , studID , count );
+  print_grades(grades, studID, count);
 
-	average = calc_average( grades , count );
+  average = calc_average(grades, count);
 
-	printf("The average grade is : %2.0f\n",average);
+  printf("The average grade is : %2.0f\n", average);
 
-	stdDev   = calc_std_deviation( grades , count );
+  stdDev = calc_std_deviation(grades, count);
 
-	// printf("The standard deviation is : \n");
+  // printf("The standard deviation is : \n");
 
-	clear_histogram( hist );
+  clear_histogram(hist);
 
-	fill_histogram( grades , hist );
+  fill_histogram(grades, hist);
 
-	return 0;
+  return 0;
 }
-

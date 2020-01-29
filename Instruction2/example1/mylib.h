@@ -8,42 +8,42 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX_GRADES  1000
-#define HIST_ITEMS  12
+#define MAX_GRADES 1000
+#define HIST_ITEMS 12
 
 int read_grades
 
-	( char*            filename ,
-      float*           grades   ,
-      int*             studID   );
+    (char *filename,
+     float *grades,
+     int *studID);
 
-void print_grades  
+void print_grades
 
-	( float*           grades ,
-      int*             studID ,
-      int              count  );
+    (float *grades,
+     int *studID,
+     int count);
 
 float calc_average
 
-	( float*           grades ,
-      int              count  );
+    (float *grades,
+     int count);
 
 float calc_std_deviation
 
-	( float*           grades ,
-      int              count  );
+    (float *grades,
+     int count);
 
 void clear_histogram
 
-    ( int*             hist );
+    (int *hist);
 
 int get_hist_item
 
-    ( float            x );
+    (float x);
 
 void fill_histogram
 
-    ( float*           grades ,
-      int*             hist   );
+    (float *grades,
+     int *hist);
 
 #endif
