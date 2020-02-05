@@ -15,7 +15,7 @@
 //---------------------------------------------------------------------
 //  This function reads the student ID numbers and the corresponding
 //  grades from an ASCII text file with the name [filename].
-//  The routine checks is the student ID number is a vaild number
+//  The routine checks is the student ID number is a valid number
 //  (i.e. studentID > 1000000) and if the grade is between 0. and 10.0
 //  
 //  Arguments: filename   filename (with relative path)
