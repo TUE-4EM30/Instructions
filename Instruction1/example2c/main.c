@@ -15,19 +15,19 @@
 #include <stdio.h>
 #include "mylib.h"
 
-int main ( void )
+int main(void)
 {
-	Coin coins[10];
- 	int amount;
-	int n;
+  Coin coins[10];
+  int amount;
+  int n;
 
-	n = init( coins );
+  n = init(coins);
 
-	amount = read();	
-    
-	split( amount , coins );
+  amount = read();
 
-    report( amount , coins , n );
+  split(amount, coins);
 
-  	return 0;
+  report(amount, coins, n);
+
+  return 0;
 }

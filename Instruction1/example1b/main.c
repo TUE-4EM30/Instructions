@@ -11,14 +11,14 @@
 
 #include <stdio.h>
 
-int main ( void )
+int main(void)
 {
-	double  x = 1.0;
-  	double  d = 0.1;
+  double x = 1.0;
+  double d = 0.1;
 
-  	while ( x > 0.0 )
-  	{
-   		x = x - d;
-    	printf( "%1.2f\n" , x );
-  	}
+  while (x > 0.0)
+  {
+    x = x - d;
+    printf("%1.2f\n", x);
+  }
 }

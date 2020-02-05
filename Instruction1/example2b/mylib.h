@@ -1,18 +1,16 @@
 #include <stdio.h>
 
-int read ( void );
+int read(void);
 
 void split
 
-	( int     amount ,
-	  int*    count  ,
-	  int*    coins  );
-
+    (int amount,
+     int *count,
+     int *coins);
 
 void report
 
-	( int     amount ,
-	  int*    count  ,
-	  int*    coins  ,
-	  int     n      );
-
+    (int amount,
+     int *count,
+     int *coins,
+     int n);
